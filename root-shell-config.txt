@@ -1,0 +1,38 @@
+# ~/.config/starship.toml
+
+# Use custom format
+
+# ~/.config/starship.toml
+
+format = '''
+[$username$hostname](bold red)[:](bold red)[$directory](bold red)[\$](bold red) '''
+
+# Wait 10 milliseconds for starship to check files under the current directory.
+scan_timeout = 10
+
+# Disable the blank line at the start of the prompt
+add_newline = false
+
+# Set 'foo' as custom color palette
+palette = 'foo'
+
+# Define custom colors
+[palettes.foo]
+# Overwrite existing color
+blue = '21'
+# Define new color
+mustard = '#af8700'
+
+
+[username]
+style_user = "red bold"
+style_root = "red bold"
+format = "[$user]($style)"
+disabled = false
+show_always = true
+
+# Configure hostname module
+[hostname]
+ssh_only = false
+format = "[@$hostname](bold red)"
+disabled = false
